@@ -4,11 +4,11 @@
 
 <div align="center">
 <!-- <a href='https://arxiv.org/abs/2507.15509'><img src='https://img.shields.io/badge/Arxiv-2507.15509-b31b1b.svg?logo=arXiv'></a>&ensp;<a href='https://huggingface.co/collections/DocTron/chart-r1-68834834a239e09e9abcb5f4'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face%20-models-blue'></a>&ensp;<a href=https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE><img src='https://img.shields.io/badge/License-Apache_2.0-green.svg'></a> -->
-<img src='https://img.shields.io/badge/License-Apache_2.0-green.svg'></a>
+<a href='https://arxiv.org/pdf/2508.21767'><img src='https://img.shields.io/badge/Arxiv-2508.21767-b31b1b.svg?logo=arXiv'><img src='https://img.shields.io/badge/License-Apache_2.0-green.svg'></a>
 
 
 Zhixiong Zeng†, Jing Huang†, Liming Zheng, Wenkang Han,
-Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He & Lin Ma*
+Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He, Lin Ma*
 </div>
 <div align="center">
 <strong>Meituan Group</strong>
@@ -19,12 +19,25 @@ Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He & Lin Ma*
 
 
 ---
-**UItron** is an open-source vision-language model designed for automated GUI agents on mobile and PC devices. Addressing challenges such as limited operation trajectories and interactive infrastructure, UItron integrates advanced GUI perception, grounding, and planning capabilities. It employs supervised finetuning and curriculum reinforcement learning to enable complex reasoning and exploration. UItron demonstrates strong performance on open-source benchmarks and excels in Chinese app scenarios, supported by over one million manually collected operation steps from top apps. These results mark a significant step toward real-world deployment of GUI agents.
-<div align="center">
+<!-- **UItron** is an open-source vision-language model designed for automated GUI agents on mobile and PC devices. Addressing challenges such as limited operation trajectories and interactive infrastructure, UItron integrates advanced GUI perception, grounding, and planning capabilities. It employs supervised finetuning and curriculum reinforcement learning to enable complex reasoning and exploration. UItron demonstrates strong performance on open-source benchmarks and excels in Chinese app scenarios, supported by over one million manually collected operation steps from top apps. These results mark a significant step toward real-world deployment of GUI agents. -->
+GUI agent aims to enable automated operations on Mobile/PC devices, which is an important task toward achieving artificial general intelligence. The rapid advancement of VLMs accelerates the development of GUI agents, owing to their powerful capabilities in visual understanding and task planning. 
+However, building a GUI agent remains a challenging task due to the scarcity of operation trajectories, the availability of interactive infrastructure, and the limitation of initial capabilities in foundation models.
+In this work, we introduce **UItron**, an open-source foundational model for automatic GUI agents, featuring advanced GUI perception, grounding, and planning capabilities.
+UItron highlights the necessity of systemic data engineering and interactive infrastructure as foundational components for advancing GUI agent development. 
+It not only systematically studies a series of data engineering strategies to enhance training effects, but also establishes an interactive environment connecting both Mobile and PC devices.
+In training, UItron adopts supervised finetuning over perception and planning tasks in various GUI scenarios, and then develop a curriculum reinforcement learning framework to enable complex reasoning and exploration for online environments.
+As a result, UItron achieves superior performance in benchmarks of GUI perception, grounding, and planning.
+In particular, UItron highlights the interaction proficiency with top-tier Chinese mobile APPs, as we identified a general lack of Chinese capabilities even in state-of-the-art solutions.
+To this end, we manually collect over one million steps of operation trajectories across the top 100 most popular apps, and build the offline and online agent evaluation environments. Experimental results demonstrate that UItron achieves significant progress in Chinese app scenarios, propelling GUI agents one step closer to real-world application. 
+<!-- <div align="center">
 <img src="./fig/UItron.png"  width="60%">
+</div> -->
+<div align="center">
+<img src="./fig/uitars_vs_uitron.png"  width="100%">
 </div>
 
 ## 📢 News and Updates
+* ```2025.09.06``` The 15-step SR result of OSworld is updated to 25.2. The SR update for AndroidControl-High is updated to 79.0 (7B) and 86.1 (72B), as we have fixed the vulnerability in the 
 * ```2025.08.28``` Code and model is coming soon.
 * ```2025.08.28``` 🔥🔥🔥 We release the technical report of **UItron**.
 
@@ -37,6 +50,10 @@ Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He & Lin Ma*
 <!-- |  UItron-72b  |  [DocTron/Chart-R1](https://huggingface.co/DocTron/Chart-R1)   | -->
 
 ## 📊 Performance
+<!-- <div align="center">
+<img src="./fig/preferment.png"  width="90%">
+</div> -->
+
 ### ScreenSpot
 <table>
 <thead>
@@ -228,17 +245,17 @@ Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He & Lin Ma*
     </tr>
     <tr>
       <td>UItron-7B</td>
-      <td>95.8</td><td>90.7</td><td>88.2</td>
-      <td>96.1</td><td>87.1</td><td>86.9</td>
+      <td>96.5</td><td>90.6</td><td>90.1</td>
+      <td>91.4</td><td>77.2</td><td>79.0</td>
       <td>95.3</td><td>85.7</td><td>84.8</td>
-      <td>90.1</td>
+      <td>87.8</td>
     </tr>
     <tr>
       <td>UItron-72B</td>
-      <td>96.5</td><td>97.1</td><td>92.8</td>
-      <td>96.7</td><td>94.2</td><td>92.4</td>
+      <td>96.4</td><td>93.8</td><td>92.0</td>
+      <td>93.9</td><td>85.3</td><td>86.1</td>
       <td>94.4</td><td>86.3</td><td>86.1</td>
-      <td>92.9</td>
+      <td>90.5</td>
     </tr>
   </tbody>
 </table>
@@ -292,7 +309,7 @@ Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He & Lin Ma*
     </tr>
     <tr>
       <td>UItron-72B</td>
-      <td>23.3</td>
+      <td>25.2</td>
     </tr>
   </tbody>
 </table>
@@ -300,7 +317,7 @@ Yufeng Zhong, Lei Chen, Longrong Yang, Yingjie Chu, Yuzhi He & Lin Ma*
 Table: Task Success Rates (SR) on OSWorld. Results are reported on the official verified environment (i.e., OSWorld-verified) that fixes several issues.
 -->
 
-### Chinese mobile Apps
+<!-- ### Chinese mobile Apps
 <table>
   <thead>
     <tr>
@@ -338,9 +355,9 @@ Table: Task Success Rates (SR) on OSWorld. Results are reported on the official 
       <td><b>84.1</b></td>
       <td><b>47.4</b></td>
     </tr>
-  </tbody>
-</table>
-<!-- Table: Offline evaluation results on top-tier Chinese mobile Apps. -->
+  </tbody> -->
+<!-- </table>  -->
+<!-- Table: Offline evaluation results on top-tier Chinese mobile Apps.
 
 <!-- 
 ## 🔍 Usage Example
