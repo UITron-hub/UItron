@@ -37,7 +37,7 @@ To this end, we manually collect over one million steps of operation trajectorie
 </div>
 
 ## 📢 News and Updates
-* ```2025.09.06``` The 15-step SR result of OSworld is updated to 25.2. The SR update for AndroidControl-High is updated to 79.0 (7B) and 86.1 (72B), as we have fixed the vulnerability in the 
+* ```2025.09.06``` The 15-step SR result of OSworld is updated to 25.2. The SR update for AndroidControl-High is updated to 79.0 (7B) and 86.1 (72B), as we have fixed the vulnerability in the evaluation.
 * ```2025.08.28``` Code and model is coming soon.
 * ```2025.08.28``` 🔥🔥🔥 We release the technical report of **UItron**.
 
