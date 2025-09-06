@@ -28,12 +28,12 @@ It not only systematically studies a series of data engineering strategies to en
 In training, UItron adopts supervised finetuning over perception and planning tasks in various GUI scenarios, and then develop a curriculum reinforcement learning framework to enable complex reasoning and exploration for online environments.
 As a result, UItron achieves superior performance in benchmarks of GUI perception, grounding, and planning.
 In particular, UItron highlights the interaction proficiency with top-tier Chinese mobile APPs, as we identified a general lack of Chinese capabilities even in state-of-the-art solutions.
-To this end, we manually collect over one million steps of operation trajectories across the top 100 most popular apps, and build the offline and online agent evaluation environments. Experimental results demonstrate that UItron achieves significant progress in Chinese app scenarios, propelling GUI agents one step closer to real-world application. 
+To this end, we manually collect over one million steps of operation trajectories across the top 100 most popular apps, and build the offline and online agent evaluation environments. Experimental results demonstrate that UItron achieves significant progress in Chinese app scenarios, propelling GUI agents one step closer to real-world application.
 <!-- <div align="center">
 <img src="./fig/UItron.png"  width="60%">
 </div> -->
 <div align="center">
-<img src="./fig/uitars_vs_uitron.png"  width="100%">
+<img src="./fig/performents.png"  width="90%">
 </div>
 
 ## 📢 News and Updates
